@@ -1,0 +1,795 @@
+{
+  "@context": {
+    "ssio": "http://example.org/software-system-intelligence-ontology#",
+    "schema": "http://schema.org/",
+    "id": "@id",
+    "type": "@type",
+    "name": "schema:name",
+    "description": "schema:description",
+    "label": "schema:name",
+    "attributes": "ssio:attributes",
+    "enumValues": "ssio:enumValues",
+    "identityKey": "ssio:identityKey",
+    "humanRef": "ssio:humanRef",
+    "invariant": "ssio:invariant",
+    "supportsTraceability": "ssio:supportsTraceability",
+    "supportsSequenceDiagram": "ssio:supportsSequenceDiagram",
+    "supportsDebugging": "ssio:supportsDebugging",
+    "supportsValidationMapping": "ssio:supportsValidationMapping",
+    "supportsNavigationMapping": "ssio:supportsNavigationMapping",
+    "traceabilityPath": "ssio:traceabilityPath",
+    "sequenceOrder": "ssio:sequenceOrder",
+    "requestSchema": "ssio:requestSchema",
+    "responseSchema": "ssio:responseSchema",
+    "payloadSchema": "ssio:payloadSchema",
+    "httpMethod": "ssio:httpMethod",
+    "path": "ssio:path",
+    "routePattern": "ssio:routePattern",
+    "stepType": "ssio:stepType",
+    "componentType": "ssio:componentType",
+    "serviceType": "ssio:serviceType",
+    "validationType": "ssio:validationType",
+    "errorCategory": "ssio:errorCategory",
+    "logLevel": "ssio:logLevel",
+    "dataStoreType": "ssio:dataStoreType",
+    "protocol": "ssio:protocol",
+    "sourceLayer": "ssio:sourceLayer",
+    "targetLayer": "ssio:targetLayer",
+    "entryPoint": "ssio:entryPoint",
+    "exitPoint": "ssio:exitPoint",
+    "actor": "ssio:actor",
+    "trigger": "ssio:trigger",
+    "condition": "ssio:condition",
+    "expression": "ssio:expression",
+    "fieldName": "ssio:fieldName",
+    "isRequired": "ssio:isRequired",
+    "isOptional": "ssio:isOptional",
+    "isAsync": "ssio:isAsync",
+    "isUserVisible": "ssio:isUserVisible",
+    "statusCode": "ssio:statusCode",
+    "errorCode": "ssio:errorCode",
+    "exceptionType": "ssio:exceptionType",
+    "messageTemplate": "ssio:messageTemplate",
+    "queryText": "ssio:queryText",
+    "dbOperation": "ssio:dbOperation",
+    "tableName": "ssio:tableName",
+    "storageEntity": "ssio:storageEntity",
+    "version": "schema:version",
+    "owner": "schema:maintainer",
+    "tags": "schema:keywords",
+    "from": {
+      "@id": "ssio:from",
+      "@type": "@id"
+    },
+    "to": {
+      "@id": "ssio:to",
+      "@type": "@id"
+    },
+    "partOfFlow": {
+      "@id": "ssio:partOfFlow",
+      "@type": "@id"
+    },
+    "hasStep": {
+      "@id": "ssio:hasStep",
+      "@type": "@id"
+    },
+    "nextStep": {
+      "@id": "ssio:nextStep",
+      "@type": "@id"
+    },
+    "callsApi": {
+      "@id": "ssio:callsApi",
+      "@type": "@id"
+    },
+    "invokesService": {
+      "@id": "ssio:invokesService",
+      "@type": "@id"
+    },
+    "usesRepository": {
+      "@id": "ssio:usesRepository",
+      "@type": "@id"
+    },
+    "persistsTo": {
+      "@id": "ssio:persistsTo",
+      "@type": "@id"
+    },
+    "navigatesTo": {
+      "@id": "ssio:navigatesTo",
+      "@type": "@id"
+    },
+    "validates": {
+      "@id": "ssio:validates",
+      "@type": "@id"
+    },
+    "dependsOn": {
+      "@id": "ssio:dependsOn",
+      "@type": "@id"
+    },
+    "conflictsWith": {
+      "@id": "ssio:conflictsWith",
+      "@type": "@id"
+    },
+    "verifiedBy": {
+      "@id": "ssio:verifiedBy",
+      "@type": "@id"
+    },
+    "originatesFrom": {
+      "@id": "ssio:originatesFrom",
+      "@type": "@id"
+    },
+    "containsComponent": {
+      "@id": "ssio:containsComponent",
+      "@type": "@id"
+    },
+    "rendersComponent": {
+      "@id": "ssio:rendersComponent",
+      "@type": "@id"
+    },
+    "belongsToScreen": {
+      "@id": "ssio:belongsToScreen",
+      "@type": "@id"
+    },
+    "ownedByService": {
+      "@id": "ssio:ownedByService",
+      "@type": "@id"
+    },
+    "implementedBy": {
+      "@id": "ssio:implementedBy",
+      "@type": "@id"
+    },
+    "executesStep": {
+      "@id": "ssio:executesStep",
+      "@type": "@id"
+    },
+    "callsMicroservice": {
+      "@id": "ssio:callsMicroservice",
+      "@type": "@id"
+    },
+    "handledBy": {
+      "@id": "ssio:handledBy",
+      "@type": "@id"
+    },
+    "emitsError": {
+      "@id": "ssio:emitsError",
+      "@type": "@id"
+    },
+    "raisesExceptionFlow": {
+      "@id": "ssio:raisesExceptionFlow",
+      "@type": "@id"
+    },
+    "logsAt": {
+      "@id": "ssio:logsAt",
+      "@type": "@id"
+    },
+    "mapsToRequirement": {
+      "@id": "ssio:mapsToRequirement",
+      "@type": "@id"
+    },
+    "traceFrom": {
+      "@id": "ssio:traceFrom",
+      "@type": "@id"
+    },
+    "traceTo": {
+      "@id": "ssio:traceTo",
+      "@type": "@id"
+    },
+    "requestTo": {
+      "@id": "ssio:requestTo",
+      "@type": "@id"
+    },
+    "responseFrom": {
+      "@id": "ssio:responseFrom",
+      "@type": "@id"
+    },
+    "Entity": "ssio:Entity",
+    "Relationship": "ssio:Relationship",
+    "Layer": "ssio:Layer",
+    "Ontology": "ssio:Ontology"
+  },
+  "@graph": [
+    {
+      "id": "ssio:SoftwareSystemIntelligenceOntology",
+      "type": "Ontology",
+      "name": "Software System Intelligence Ontology",
+      "description": "JSON-LD ontology for tracing requirements, business flows, frontend, APIs, backend services, microservices, persistence, and debugging across a microservices-based web application.",
+      "version": "2.0.0",
+      "supportsTraceability": true,
+      "supportsSequenceDiagram": true,
+      "supportsDebugging": true,
+      "supportsValidationMapping": true,
+      "supportsNavigationMapping": true,
+      "traceabilityPath": "UI Screen -> UI Component -> API Endpoint -> Service Component -> Service Method -> Processing Step -> Repository -> Database Entity",
+      "attributes": {
+        "scope": "Microservices-based web application",
+        "primaryGoal": "End-to-end architectural intelligence and traceability",
+        "sequenceSupport": "sequenceOrder, nextStep, requestTo, responseFrom, callsApi, invokesService, callsMicroservice",
+        "debugSupport": "ErrorCode, ExceptionFlow, LogPoint, originatesFrom"
+      }
+    },
+    {
+      "id": "ssio:RequirementsLayer",
+      "type": "Layer",
+      "name": "Requirements Layer",
+      "description": "Captures business, functional, quality, security, and performance requirements."
+    },
+    {
+      "id": "ssio:BusinessFlowLayer",
+      "type": "Layer",
+      "name": "Business Flow Layer",
+      "description": "Captures business process orchestration and ordered flow steps."
+    },
+    {
+      "id": "ssio:FrontendLayer",
+      "type": "Layer",
+      "name": "Frontend Layer",
+      "description": "Captures screens, components, validation rules, and screen navigation."
+    },
+    {
+      "id": "ssio:ApiLayer",
+      "type": "Layer",
+      "name": "API Layer",
+      "description": "Captures API endpoints, request models, and response models."
+    },
+    {
+      "id": "ssio:BackendLayer",
+      "type": "Layer",
+      "name": "Backend Layer",
+      "description": "Captures controllers, services, repositories, methods, and processing steps."
+    },
+    {
+      "id": "ssio:MicroservicesLayer",
+      "type": "Layer",
+      "name": "Microservices Layer",
+      "description": "Captures services and inter-service calls across bounded contexts."
+    },
+    {
+      "id": "ssio:ErrorDebuggingLayer",
+      "type": "Layer",
+      "name": "Error and Debugging Layer",
+      "description": "Captures error codes, exception propagation, and logging points."
+    },
+    {
+      "id": "ssio:DataLayer",
+      "type": "Layer",
+      "name": "Data Layer",
+      "description": "Captures persistence targets for end-to-end UI to DB traceability."
+    },
+    {
+      "id": "ssio:Requirement",
+      "type": "Entity",
+      "name": "Requirement",
+      "description": "Base requirement for traceable system specifications.",
+      "identityKey": "requirementId",
+      "humanRef": "requirementCode",
+      "attributes": {
+        "requirementId": "string",
+        "requirementCode": "string",
+        "name": "string",
+        "description": "string",
+        "priority": "CRITICAL|HIGH|MEDIUM|LOW",
+        "status": "DRAFT|APPROVED|IMPLEMENTED|VERIFIED|REJECTED",
+        "owner": "string|null",
+        "tags": "string[]"
+      },
+      "supportsTraceability": true
+    },
+    {
+      "id": "ssio:FunctionalRequirement",
+      "type": "Entity",
+      "name": "FunctionalRequirement",
+      "description": "Defines what the system should do.",
+      "identityKey": "requirementId",
+      "humanRef": "requirementCode",
+      "attributes": {
+        "requirementId": "string",
+        "requirementCode": "string",
+        "capability": "string",
+        "acceptanceCriteria": "string",
+        "businessRule": "string|null"
+      },
+      "dependsOn": ["ssio:Requirement"],
+      "conflictsWith": ["ssio:Requirement"],
+      "verifiedBy": ["ssio:ApiEndpoint", "ssio:ServiceMethod", "ssio:UIScreen"]
+    },
+    {
+      "id": "ssio:NonFunctionalRequirement",
+      "type": "Entity",
+      "name": "NonFunctionalRequirement",
+      "description": "Defines measurable quality constraints.",
+      "identityKey": "requirementId",
+      "humanRef": "requirementCode",
+      "attributes": {
+        "requirementId": "string",
+        "requirementCode": "string",
+        "qualityAttribute": "PERFORMANCE|SECURITY|USABILITY|RELIABILITY|SCALABILITY|AVAILABILITY|MAINTAINABILITY",
+        "measurementCriteria": "string",
+        "targetValue": "string"
+      },
+      "verifiedBy": ["ssio:ApiEndpoint", "ssio:ServiceMethod", "ssio:LogPoint"]
+    },
+    {
+      "id": "ssio:SecurityRequirement",
+      "type": "Entity",
+      "name": "SecurityRequirement",
+      "description": "Defines security constraints, controls, and compliance expectations.",
+      "identityKey": "requirementId",
+      "humanRef": "requirementCode",
+      "attributes": {
+        "requirementId": "string",
+        "requirementCode": "string",
+        "securityCategory": "AUTHENTICATION|AUTHORIZATION|DATA_PROTECTION|PRIVACY|AUDIT|COMPLIANCE",
+        "threatModel": "string|null",
+        "mitigationStrategy": "string",
+        "complianceStandard": "string|null"
+      },
+      "verifiedBy": ["ssio:UIValidationRule", "ssio:ApiEndpoint", "ssio:ServiceMethod", "ssio:LogPoint"]
+    },
+    {
+      "id": "ssio:PerformanceRequirement",
+      "type": "Entity",
+      "name": "PerformanceRequirement",
+      "description": "Defines latency, throughput, and resource constraints.",
+      "identityKey": "requirementId",
+      "humanRef": "requirementCode",
+      "attributes": {
+        "requirementId": "string",
+        "requirementCode": "string",
+        "performanceMetric": "RESPONSE_TIME|LATENCY|THROUGHPUT|CPU|MEMORY|CONCURRENCY",
+        "targetValue": "string",
+        "measurementMethod": "string",
+        "loadCondition": "string|null"
+      },
+      "verifiedBy": ["ssio:ApiEndpoint", "ssio:ServiceMethod", "ssio:InterServiceCall", "ssio:LogPoint"]
+    },
+    {
+      "id": "ssio:BusinessFlow",
+      "type": "Entity",
+      "name": "BusinessFlow",
+      "description": "Represents an end-to-end business process or user journey.",
+      "identityKey": "flowId",
+      "humanRef": "flowCode",
+      "attributes": {
+        "flowId": "string",
+        "flowCode": "string",
+        "goal": "string",
+        "actor": "string",
+        "entryPoint": "string",
+        "exitPoint": "string"
+      },
+      "hasStep": ["ssio:FlowStep"],
+      "supportsSequenceDiagram": true
+    },
+    {
+      "id": "ssio:FlowStep",
+      "type": "Entity",
+      "name": "FlowStep",
+      "description": "A single ordered step within a business flow.",
+      "identityKey": "stepId",
+      "humanRef": "stepCode",
+      "attributes": {
+        "stepId": "string",
+        "stepCode": "string",
+        "sequenceOrder": "integer",
+        "actor": "USER|SYSTEM|EXTERNAL_SERVICE",
+        "trigger": "string",
+        "condition": "string|null",
+        "stepType": "UI|API|SERVICE|DB|EXTERNAL|ERROR"
+      },
+      "partOfFlow": "ssio:BusinessFlow",
+      "nextStep": "ssio:FlowStep",
+      "requestTo": ["ssio:ApiEndpoint", "ssio:ServiceMethod", "ssio:InterServiceCall"],
+      "responseFrom": ["ssio:ApiEndpoint", "ssio:ServiceMethod", "ssio:InterServiceCall"],
+      "supportsSequenceDiagram": true
+    },
+    {
+      "id": "ssio:UIScreen",
+      "type": "Entity",
+      "name": "UIScreen",
+      "description": "A frontend screen, page, or view that users interact with.",
+      "identityKey": "screenId",
+      "humanRef": "screenCode",
+      "attributes": {
+        "screenId": "string",
+        "screenCode": "string",
+        "routePattern": "string",
+        "entryPoint": "boolean",
+        "exitPoint": "boolean",
+        "sourceLayer": "FRONTEND"
+      },
+      "containsComponent": ["ssio:UIComponent"],
+      "callsApi": ["ssio:ApiEndpoint"],
+      "navigatesTo": ["ssio:UIScreen"],
+      "mapsToRequirement": ["ssio:FunctionalRequirement", "ssio:NonFunctionalRequirement", "ssio:SecurityRequirement", "ssio:PerformanceRequirement"],
+      "supportsTraceability": true,
+      "supportsNavigationMapping": true
+    },
+    {
+      "id": "ssio:UIComponent",
+      "type": "Entity",
+      "name": "UIComponent",
+      "description": "A reusable frontend component such as form, button, modal, or list.",
+      "identityKey": "componentId",
+      "humanRef": "componentName",
+      "attributes": {
+        "componentId": "string",
+        "componentName": "string",
+        "componentType": "FORM|BUTTON|INPUT|TABLE|MODAL|CARD|LIST|NAVBAR",
+        "fieldName": "string|null",
+        "isRequired": "boolean",
+        "sourceLayer": "FRONTEND"
+      },
+      "belongsToScreen": "ssio:UIScreen",
+      "validates": ["ssio:UIValidationRule"],
+      "callsApi": ["ssio:ApiEndpoint"],
+      "mapsToRequirement": ["ssio:FunctionalRequirement", "ssio:SecurityRequirement"],
+      "supportsTraceability": true
+    },
+    {
+      "id": "ssio:UIValidationRule",
+      "type": "Entity",
+      "name": "UIValidationRule",
+      "description": "A frontend validation rule used for fields and user input constraints.",
+      "identityKey": "validationRuleId",
+      "humanRef": "ruleCode",
+      "attributes": {
+        "validationRuleId": "string",
+        "ruleCode": "string",
+        "fieldName": "string",
+        "validationType": "REQUIRED|MIN_LENGTH|MAX_LENGTH|REGEX|EMAIL|CUSTOM",
+        "expression": "string",
+        "messageTemplate": "string",
+        "isUserVisible": "boolean"
+      },
+      "validates": ["ssio:UIComponent", "ssio:ApiEndpoint"],
+      "originatesFrom": ["ssio:SecurityRequirement", "ssio:FunctionalRequirement"]
+    },
+    {
+      "id": "ssio:Navigation",
+      "type": "Entity",
+      "name": "Navigation",
+      "description": "Represents a directed screen-to-screen transition in the frontend.",
+      "identityKey": "navigationId",
+      "humanRef": "navigationCode",
+      "attributes": {
+        "navigationId": "string",
+        "navigationCode": "string",
+        "trigger": "CLICK|SUBMIT|REDIRECT|AUTO_ROUTE|ERROR_REDIRECT",
+        "condition": "string|null",
+        "sequenceOrder": "integer"
+      },
+      "from": "ssio:UIScreen",
+      "to": "ssio:UIScreen",
+      "partOfFlow": "ssio:BusinessFlow",
+      "supportsNavigationMapping": true,
+      "supportsSequenceDiagram": true
+    },
+    {
+      "id": "ssio:ApiEndpoint",
+      "type": "Entity",
+      "name": "ApiEndpoint",
+      "description": "A REST or HTTP API endpoint exposed by a service.",
+      "identityKey": "endpointId",
+      "humanRef": "operationId",
+      "attributes": {
+        "endpointId": "string",
+        "operationId": "string",
+        "path": "string",
+        "httpMethod": "GET|POST|PUT|PATCH|DELETE",
+        "requestSchema": "object|string",
+        "responseSchema": "object|string",
+        "statusCode": "integer",
+        "sourceLayer": "API"
+      },
+      "invokesService": ["ssio:ServiceComponent", "ssio:ServiceMethod"],
+      "validates": ["ssio:UIValidationRule"],
+      "emitsError": ["ssio:ErrorCode"],
+      "handledBy": ["ssio:Microservice"],
+      "mapsToRequirement": ["ssio:FunctionalRequirement", "ssio:SecurityRequirement", "ssio:PerformanceRequirement"],
+      "supportsTraceability": true,
+      "supportsSequenceDiagram": true,
+      "supportsDebugging": true
+    },
+    {
+      "id": "ssio:ServiceComponent",
+      "type": "Entity",
+      "name": "ServiceComponent",
+      "description": "A backend component such as controller, service, or repository.",
+      "identityKey": "serviceComponentId",
+      "humanRef": "componentName",
+      "attributes": {
+        "serviceComponentId": "string",
+        "componentName": "string",
+        "serviceType": "CONTROLLER|SERVICE|REPOSITORY",
+        "sourceLayer": "BACKEND"
+      },
+      "implementedBy": ["ssio:Microservice"],
+      "invokesService": ["ssio:ServiceComponent", "ssio:ServiceMethod"],
+      "usesRepository": ["ssio:ServiceComponent"],
+      "persistsTo": ["ssio:DataEntity"],
+      "supportsTraceability": true
+    },
+    {
+      "id": "ssio:ServiceMethod",
+      "type": "Entity",
+      "name": "ServiceMethod",
+      "description": "A method within a service component participating in request handling.",
+      "identityKey": "methodId",
+      "humanRef": "methodSignature",
+      "attributes": {
+        "methodId": "string",
+        "methodSignature": "string",
+        "serviceType": "CONTROLLER|SERVICE|REPOSITORY",
+        "isAsync": "boolean",
+        "requestSchema": "object|string|null",
+        "responseSchema": "object|string|null"
+      },
+      "ownedByService": "ssio:ServiceComponent",
+      "executesStep": ["ssio:ProcessingStep"],
+      "invokesService": ["ssio:ServiceMethod"],
+      "usesRepository": ["ssio:ServiceComponent"],
+      "persistsTo": ["ssio:DataEntity"],
+      "emitsError": ["ssio:ErrorCode"],
+      "raisesExceptionFlow": ["ssio:ExceptionFlow"],
+      "logsAt": ["ssio:LogPoint"],
+      "mapsToRequirement": ["ssio:FunctionalRequirement", "ssio:SecurityRequirement", "ssio:PerformanceRequirement"],
+      "supportsTraceability": true,
+      "supportsSequenceDiagram": true,
+      "supportsDebugging": true
+    },
+    {
+      "id": "ssio:ProcessingStep",
+      "type": "Entity",
+      "name": "ProcessingStep",
+      "description": "A fine-grained backend step such as validation, transformation, enrichment, or persistence.",
+      "identityKey": "processingStepId",
+      "humanRef": "stepCode",
+      "attributes": {
+        "processingStepId": "string",
+        "stepCode": "string",
+        "sequenceOrder": "integer",
+        "stepType": "VALIDATION|TRANSFORMATION|ENRICHMENT|AUTHORIZATION|PERSISTENCE|EVENT_PUBLICATION",
+        "description": "string"
+      },
+      "originatesFrom": ["ssio:ApiEndpoint", "ssio:UIComponent"],
+      "persistsTo": ["ssio:DataEntity"],
+      "emitsError": ["ssio:ErrorCode"],
+      "logsAt": ["ssio:LogPoint"],
+      "supportsTraceability": true,
+      "supportsSequenceDiagram": true,
+      "supportsDebugging": true
+    },
+    {
+      "id": "ssio:Microservice",
+      "type": "Entity",
+      "name": "Microservice",
+      "description": "A deployable bounded-context service in the microservices architecture.",
+      "identityKey": "microserviceId",
+      "humanRef": "serviceName",
+      "attributes": {
+        "microserviceId": "string",
+        "serviceName": "string",
+        "version": "string",
+        "protocol": "HTTP|GRPC|EVENT",
+        "owner": "string|null",
+        "targetLayer": "MICROSERVICES"
+      },
+      "containsComponent": ["ssio:ServiceComponent"],
+      "callsMicroservice": ["ssio:InterServiceCall"],
+      "dependsOn": ["ssio:Microservice"],
+      "supportsTraceability": true,
+      "supportsSequenceDiagram": true
+    },
+    {
+      "id": "ssio:InterServiceCall",
+      "type": "Entity",
+      "name": "InterServiceCall",
+      "description": "Represents a service-to-service invocation.",
+      "identityKey": "callId",
+      "humanRef": "callCode",
+      "attributes": {
+        "callId": "string",
+        "callCode": "string",
+        "protocol": "HTTP|GRPC|EVENT",
+        "isAsync": "boolean",
+        "requestSchema": "object|string|null",
+        "responseSchema": "object|string|null",
+        "sequenceOrder": "integer",
+        "timeoutMs": "integer|null"
+      },
+      "from": "ssio:Microservice",
+      "to": "ssio:Microservice",
+      "originatesFrom": ["ssio:ServiceMethod"],
+      "emitsError": ["ssio:ErrorCode"],
+      "raisesExceptionFlow": ["ssio:ExceptionFlow"],
+      "logsAt": ["ssio:LogPoint"],
+      "supportsTraceability": true,
+      "supportsSequenceDiagram": true,
+      "supportsDebugging": true
+    },
+    {
+      "id": "ssio:DataEntity",
+      "type": "Entity",
+      "name": "DataEntity",
+      "description": "A database table, collection, or persisted domain entity.",
+      "identityKey": "dataEntityId",
+      "humanRef": "storageEntity",
+      "attributes": {
+        "dataEntityId": "string",
+        "storageEntity": "string",
+        "dataStoreType": "SQL_TABLE|NOSQL_COLLECTION|CACHE|SEARCH_INDEX",
+        "tableName": "string",
+        "queryText": "string|null",
+        "dbOperation": "INSERT|UPDATE|DELETE|SELECT|UPSERT"
+      },
+      "originatesFrom": ["ssio:RepositoryMethod", "ssio:ProcessingStep", "ssio:ServiceMethod"],
+      "supportsTraceability": true
+    },
+    {
+      "id": "ssio:ErrorCode",
+      "type": "Entity",
+      "name": "ErrorCode",
+      "description": "A normalized application or integration error code.",
+      "identityKey": "errorCode",
+      "humanRef": "errorCode",
+      "attributes": {
+        "errorCode": "string",
+        "statusCode": "integer",
+        "errorCategory": "VALIDATION|AUTHORIZATION|AUTHENTICATION|BUSINESS|INTEGRATION|PERSISTENCE|SYSTEM",
+        "messageTemplate": "string",
+        "isUserVisible": "boolean"
+      },
+      "originatesFrom": ["ssio:UIValidationRule", "ssio:ApiEndpoint", "ssio:ServiceMethod", "ssio:ProcessingStep", "ssio:InterServiceCall", "ssio:DataEntity"],
+      "supportsDebugging": true
+    },
+    {
+      "id": "ssio:ExceptionFlow",
+      "type": "Entity",
+      "name": "ExceptionFlow",
+      "description": "Represents exception propagation and handling path across layers.",
+      "identityKey": "exceptionFlowId",
+      "humanRef": "exceptionType",
+      "attributes": {
+        "exceptionFlowId": "string",
+        "exceptionType": "string",
+        "sequenceOrder": "integer",
+        "description": "string"
+      },
+      "originatesFrom": ["ssio:ServiceMethod", "ssio:InterServiceCall", "ssio:ProcessingStep", "ssio:DataEntity"],
+      "handledBy": ["ssio:ApiEndpoint", "ssio:ServiceMethod"],
+      "emitsError": ["ssio:ErrorCode"],
+      "logsAt": ["ssio:LogPoint"],
+      "supportsSequenceDiagram": true,
+      "supportsDebugging": true
+    },
+    {
+      "id": "ssio:LogPoint",
+      "type": "Entity",
+      "name": "LogPoint",
+      "description": "A logging checkpoint used for observability and debugging.",
+      "identityKey": "logPointId",
+      "humanRef": "logCode",
+      "attributes": {
+        "logPointId": "string",
+        "logCode": "string",
+        "logLevel": "TRACE|DEBUG|INFO|WARN|ERROR",
+        "messageTemplate": "string",
+        "sequenceOrder": "integer",
+        "tags": "string[]"
+      },
+      "originatesFrom": ["ssio:ApiEndpoint", "ssio:ServiceMethod", "ssio:ProcessingStep", "ssio:InterServiceCall", "ssio:ExceptionFlow"],
+      "supportsDebugging": true,
+      "supportsSequenceDiagram": true
+    },
+    {
+      "id": "ssio:callsApi",
+      "type": "Relationship",
+      "name": "callsApi",
+      "description": "Links a UI screen or UI component to the API endpoint it calls.",
+      "from": "ssio:UIScreen",
+      "to": "ssio:ApiEndpoint"
+    },
+    {
+      "id": "ssio:invokesService",
+      "type": "Relationship",
+      "name": "invokesService",
+      "description": "Links API endpoints or service elements to backend components or methods they invoke.",
+      "from": "ssio:ApiEndpoint",
+      "to": "ssio:ServiceMethod"
+    },
+    {
+      "id": "ssio:partOfFlow",
+      "type": "Relationship",
+      "name": "partOfFlow",
+      "description": "Associates a flow step or navigation edge with a business flow.",
+      "from": "ssio:FlowStep",
+      "to": "ssio:BusinessFlow"
+    },
+    {
+      "id": "ssio:navigatesTo",
+      "type": "Relationship",
+      "name": "navigatesTo",
+      "description": "Links one screen to another through user or system navigation.",
+      "from": "ssio:UIScreen",
+      "to": "ssio:UIScreen"
+    },
+    {
+      "id": "ssio:validates",
+      "type": "Relationship",
+      "name": "validates",
+      "description": "Links validation rules to the UI component or API contract they validate.",
+      "from": "ssio:UIValidationRule",
+      "to": "ssio:UIComponent"
+    },
+    {
+      "id": "ssio:dependsOn",
+      "type": "Relationship",
+      "name": "dependsOn",
+      "description": "Captures structural or requirement dependencies.",
+      "from": "ssio:Requirement",
+      "to": "ssio:Requirement"
+    },
+    {
+      "id": "ssio:conflictsWith",
+      "type": "Relationship",
+      "name": "conflictsWith",
+      "description": "Captures requirement conflicts for design or implementation analysis.",
+      "from": "ssio:Requirement",
+      "to": "ssio:Requirement"
+    },
+    {
+      "id": "ssio:verifiedBy",
+      "type": "Relationship",
+      "name": "verifiedBy",
+      "description": "Links requirements to implementation or verification artifacts.",
+      "from": "ssio:Requirement",
+      "to": "ssio:ApiEndpoint"
+    },
+    {
+      "id": "ssio:originatesFrom",
+      "type": "Relationship",
+      "name": "originatesFrom",
+      "description": "Links errors, exception flows, and trace elements to their source artifact for debugging.",
+      "from": "ssio:ErrorCode",
+      "to": "ssio:ServiceMethod"
+    },
+    {
+      "id": "ssio:TraceabilityPattern",
+      "type": "Entity",
+      "name": "TraceabilityPattern",
+      "description": "Canonical end-to-end trace pattern for UI to DB lineage.",
+      "attributes": {
+        "patternName": "UI_TO_DB_TRACE",
+        "path": "UIScreen -> UIComponent -> ApiEndpoint -> ServiceComponent -> ServiceMethod -> ProcessingStep -> DataEntity",
+        "requiredRelationships": "callsApi, invokesService, executesStep, persistsTo, originatesFrom",
+        "purpose": "Support full traceability from user interaction to persistent storage"
+      },
+      "supportsTraceability": true
+    },
+    {
+      "id": "ssio:SequenceDiagramPattern",
+      "type": "Entity",
+      "name": "SequenceDiagramPattern",
+      "description": "Canonical pattern for generating sequence diagrams from ontology instances.",
+      "attributes": {
+        "actors": "UIScreen, ApiEndpoint, ServiceMethod, InterServiceCall, DataEntity, ExceptionFlow",
+        "orderingField": "sequenceOrder",
+        "transitionFields": "nextStep, requestTo, responseFrom",
+        "purpose": "Enable ordered interaction visualization across layers"
+      },
+      "supportsSequenceDiagram": true
+    },
+    {
+      "id": "ssio:DebugTracePattern",
+      "type": "Entity",
+      "name": "DebugTracePattern",
+      "description": "Canonical pattern for tracing failures from user-visible error back to source component.",
+      "attributes": {
+        "traceStart": "ErrorCode",
+        "traceEdges": "originatesFrom, raisesExceptionFlow, logsAt",
+        "traceTargets": "UIValidationRule, ApiEndpoint, ServiceMethod, ProcessingStep, InterServiceCall, DataEntity",
+        "purpose": "Support root cause analysis and production debugging"
+      },
+      "supportsDebugging": true
+    }
+  ]
+}
